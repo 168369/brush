@@ -1,15 +1,15 @@
 ```
 # Dependencies
 node_modules/
-venv/
 .venv/
+venv/
 __pycache__/
 .mypy_cache/
 .pytest_cache/
-dist/
-build/
 target/
 .gradle/
+dist/
+build/
 
 # Compiled files
 *.pyc
