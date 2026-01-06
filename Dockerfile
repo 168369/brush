@@ -1,10 +1,11 @@
 # 使用支持CUDA和NVIDIA容器工具包的基础镜像
-FROM nvidia/cuda:12.4-devel-ubuntu22.04
+FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
 
 # 设置环境变量
 ENV DEBIAN_FRONTEND=noninteractive
 ENV NVIDIA_VISIBLE_DEVICES=all
-ENV NVIDIA_DRIVER_CAPABILITIES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
+ENV NVIDIA_REQUIRE_CUDA="cuda>=12.1"
 
 # 安装系统依赖
 RUN apt-get update && apt-get install -y \
